@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block title_content %}
+    <title>SDF</title>
+{% endblock %}
+
+{% block page_content %}
+<h1 style="color:blue">THis is student Django Forms</h1>
+<form method="POST">
+    {% csrf_token %}
+  {{ student_form.as_p }}
+<input type="submit" name="submit" value="Student Form">
+<br>
+##############################################################<br>
+    {% if isFormSumbmitte  %}
+Firstname   :  {{ firstname }}<br>
+Lastname    :  {{ lastname }}<br>
+Gender      :     {{ gender }}<br>
+Contactnumber      :     {{ contactnumber }}<br>
+Emailid      :     {{ emailid }}<br>
+Confirm_Emailid      :     {{ confirm_Emailid }}<br>
+Address      :     {{ address }}<br>
+Date Of Birth      :     {{ DOB }}<br>
+City      :     {{ City }}<br>
+State      :     {{ State }}<br>
+Python      :     {{ Python }}<br>
+Java      :     {{ Java }}<br>
+    {% endif %}
+##############################################################
+</form>
+{% endblock %}

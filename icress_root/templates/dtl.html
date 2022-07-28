@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title_content %}
+    <title>DTL</title>
+{% endblock %}
+
+
+{% block page_content %}
+    <h1> {{ msg_key }} </h1>
+Name  =  {{ name_key }}<br>
+Age  =  {{ age_key }}<br>
+List_Items  =  {{ list_key.0 }} , {{ list_key.1 }} , {{ list_key.2 }}<br>
+Topics = {{ topic_key.1001 }} , {{ topic_key.1003 }}<br>
+this is key :::
+          {{topic_key.keys }} <br>
+this is values:::
+          {{ topic_key.values }}<br>
+Reagarding data for topic_keys::
+{% for key,topic_key in topic_key.items %}
+       {{ key }} {{ topic_key }}
+{% endfor %}
+<br>
+Marriage_status : {{ Marriage_status }}<br>
+Employee  {{ Employee_details.name }}  details:::<br>
+Emp_name  :  {{ Employee_details.name }}<br>
+Emp_age   :  {{ Employee_details.age }}<br>
+Emp_address : {{ Employee_details.address }}<br>
+Emp_salary   :  {{ Employee_details.salary }}<br>
+Now Time      :   {{ today_date }}<br>
+{% for employee in emp_list %}
+Employee Name  {{ employee.name }}<br>
+Employee Age  {{ employee.age }}<br>
+Employee Address  {{ employee.address }}<br>
+Employee Salary  {{ employee.salary }}<br>
+{% endfor %}
+Todat date Default  :   {{ today_date|date:"M d b Y" }}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block title_content %}
+<title>VIJAY PAGE</title>
+{% endblock %}
+
+{% block page_content %}
+<h1>THIS IS VIJAY PAGE CREATED</h1>
+<br>
+<br>
+<form method="POST">
+    {% csrf_token %}
+
+             {{employee.as_p}}
+<input type="submit" name="submit">
+</form>
+{% endblock %}

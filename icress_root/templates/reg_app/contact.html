@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block title_content %}
+    <title> contact us </title>
+{% endblock %}
+
+{% block page_content %}
+{% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            {{ message }}
+          </div>
+        {% endfor %}
+    <h1>THIS IS CONTACT US PAGE  !!!</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="input-field">
+    <input type="text" name="name" id="username">
+    <label for="username">Name</label>
+    </div>
+    <div class="input-field">
+    <input type="email" name="email" id="email" required>
+    <label for="username">Email</label>
+    </div>
+    <div class="input-field">
+              <textarea id="textarea1" class="materialize-textarea" name="message" data-length="1000"></textarea>
+              <label for="textarea1">Message</label>
+    </div>
+    <div class="center">
+    <input type="submit" value="submit" name="submit" class="btn red lighten-2">
+    </div>
+</form>
+{% endblock %}

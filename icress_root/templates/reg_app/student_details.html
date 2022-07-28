@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+
+{% block title_content %}
+    <title>Student</title>
+{% endblock %}
+
+
+{% block page_content %}
+
+     <h1>THIS {{ firstname }} STUDENT DETAILS</h1>
+first_name : {{ firstname }}<br>
+last_name : {{ lastname }}<br>
+Gender : {{ gender }}<br>
+contact_number : {{ contactnumber }}<br>
+Address : {{ address }}<br>
+City : {{ city }}<br>
+State : {{ state }}<br>
+courses:{{ courses }}<br>
+python : {{python}}<br>
+Django': {{Django}}<br>
+Java : {{Java}}<br>
+Bigdata : {{Bigdata}}<br>
+Email_id : {{ emailid }}<br>
+Password : {{ password }}<br>
+Confomepassword : {{ confomepassword }}
+
+{% endblock %}

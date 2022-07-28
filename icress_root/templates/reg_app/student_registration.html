@@ -1,0 +1,113 @@
+{% extends 'layout.html' %}
+
+{% block title_content %}
+<title> STUDENT </title>
+{% endblock %}
+
+{% block page_content %}
+<form method="POST">
+    {% csrf_token %}
+
+    <h1><font color="red"> STUDENT REGISTRATION FORM</h1><br>
+<table>
+    <tr>
+        <td> First_Name </td>
+        <td><input type="text" name="firstname"></td>
+    </tr>
+    <tr>
+        <td> Last_name </td>
+        <td><input type="text" name="lastname"></td>
+    </tr>
+    <tr>
+        <td> gender </td>
+        <td>
+        <input type="radio" name="gender" value="Male">
+            <label>Male</label><br>
+        <input type="radio" name="gender" value="Female">
+            <label>Female</label><br>
+        </td>
+    </tr>
+    <tr>
+        <td> Contact Number </td>
+        <td><input type="text" name="contactnumber"></td>
+    </tr>
+    <tr>
+        <td> Email Id </td>
+        <td><input type="text" name="emailid"></td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td>
+            <textarea name="address"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td>city</td>
+        <td>
+            <select name="city">
+                <option value='Bangalore'>Bangalore</option>>
+                <option value='Hydarabad'>Hyderabad</option>>
+                <option value='Amaravathi'>Amaravathi</option>>
+                <option value='Chennai'>Chennai</option>>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>State</td>
+        <td>
+            <select name="state">
+                <option value='Telangana'>Telangana</option>
+                <option value='Karnataka'>Karnataka</option>
+                <option value='Andhrapradesh'>Andhrapradesh</option>
+                <option value='Tamilnadu'>Tamilnadu</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>courseintrested</td>
+        <td>
+            <input type="checkbox" name="python" value="python">
+            <label>Python</label><br>
+
+            <input type="checkbox" name="Django" value="Django">
+            <label>Django</label><br>
+
+            <input type="checkbox" name="Java" value="Java">
+            <label>Java</label><br>
+
+            <input type="checkbox" name="Bigdata" value="Bigdata">
+            <label>Bigdata</label><br>
+        </td>
+    </tr>
+    <tr>
+        <td>username</td>
+        <td>
+            <input type="text" name="username"><br>
+        </td>
+    </tr>
+    <tr>
+        <td>password</td>
+        <td><input type="password" name="password"></td>
+    </tr>
+    <tr>
+        <td>Confome Password</td>
+        <td><input type="text" name="confomepassword"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="reset" name="reset"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="submit" name="submit" value="student register"></td>
+    </tr>
+</table>
+</form>
+
+{% endblock %}
+
+
+
+
