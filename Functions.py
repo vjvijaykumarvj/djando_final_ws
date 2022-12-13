@@ -62,7 +62,7 @@ def fun_name():
 
 fun_name()
 '''
-#nonlocal functions
+# nonlocal functions
 '''def parent_f():
     name='vijaykumar'
     def fun1():
@@ -128,7 +128,7 @@ def student(age=24,name,address='BTM'):
 student('vijay')
 '''
 
-#Arbitary or variable length arguments:::
+# Arbitary or variable length arguments:::
 '''def fun_name(*x):
     print('x--->',x)
 fun_name(23,323,2232,3232,32,32,3,232,32,676)
@@ -219,19 +219,14 @@ x=filter(lambda x : x % 2 ==0 ,numlist)
 print(list(x))
 '''
 
-
 '''name_list=['java','python','casendra','pycharm','pypy','django','pyramid']z=filter(lambda name : len(name)>2 and name[1]=='a' ,name_list )
 print(list(z))
 '''
-
 
 '''name_list=['jarva','python','casendra','pycharm','pypy','django','pyramid']
 x=[name for name in name_list if len(name)>2 and name[2]=='r']
 print(tuple(x))
 '''
-
-
-
 
 '''num_list=[1,2,3,4,5,6,7,8,9,10]
 final_result=[]
@@ -246,7 +241,7 @@ names=['vikram','vijay''vinay','vasu','vinay','vamsi','venky']
 j=map(lambda x: len(x)>2 and x[1]=='i',names)
 print(tuple(j))
 '''
-#tuenary operator:
+# tuenary operator:
 '''x=12
 y=10
 if x>y:
@@ -254,7 +249,6 @@ if x>y:
 else:
     print('False')
 '''
-
 
 '''names=['mansa','uncle','auntie','iterable','bala','sudan','owel']
 z=list(filter(lambda x:x[0].lower() in 'aeiou',names))
@@ -264,23 +258,10 @@ courses=['java','python','casendra','c++','c','scalal','sasi','ravi']
 l=list(filter(lambda course:len(course)>2 and course[2]=='v',courses))
 print(l)
 '''
-
-
-
-
-
-
-
-
-
+'''
 names=['malli','ajai','ali','erope','das','pallavi']
 x=(name for name in names if name[0] in 'a,e,i,o,u')
 print(tuple(x))
-
-
-
-
-
-
+'''
 
 
