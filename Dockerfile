@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD ["sh", "-c", "cd icress_root && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+CMD ["sh", "-c", "cd icress_root && python manage.py migrate && gunicorn --bind 0.0.0.0:8000 icress.wsgi"]
